@@ -10,7 +10,7 @@
   "dependencies": {
     "@ayana/logger": "^2.1.1",
     "discord.js": "github:discordjs/discord.js",
-    "discord.js-andesite": "^1.0.3",
+    "discord.js-andesite": "^1.0.4",
     "dotenv": "^8.2.0",
     "fs": "^0.0.1-security"
   },
