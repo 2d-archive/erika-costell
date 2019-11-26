@@ -1,5 +1,5 @@
 /**
- * @name CommandOptions
+ * @typedef {Object} CommandOptions
  * @prop {String[]} aliases
  * @prop {String} description
  * @prop {String} category

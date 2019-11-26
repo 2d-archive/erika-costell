@@ -2,3 +2,7 @@
 /*.http
 /*.lock
 /.env
+/application.conf
+/andesite.jar
+/logs
+/.idea

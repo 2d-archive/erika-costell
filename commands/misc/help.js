@@ -1,4 +1,4 @@
-const Command = require("../structures/Command");
+const Command = require("../../structures/Command");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = class JoinCommand extends Command {
@@ -26,7 +26,10 @@ module.exports = class JoinCommand extends Command {
         .setTitle(`erika ${command.aliases[0]} ${command.usage}`))
     }
 
-    const Embed = new MessageEmbed().setColor("BLUE");
+    const Embed = new MessageEmbed()
+      .setColor("BLUE")
+      .setAuthor(client.user.tag, client.user.avatarURL(), `https://github.com/lolwastedjs/erika-costell`)
+      .setDescription(`A collection of commands that the developer had to make...`);
     for (const category of [...new Set(client.commands.map(c => c.category))])
       Embed.addField(category, client.commands.filter(_ => _.category === category).map(_ => `\`${_.name}\``).join(", "))
 

@@ -36,11 +36,11 @@ class Queue extends events_1.EventEmitter {
       return 0;
     return this.next.push(...songs);
   }
-  async _next() {
+  _next() {
     const next = this.next.shift();
     if (this.np.song)
       this.previous.unshift(this.np.song);
-    this.np = { song: next, position: 0 };
+    return this.np = { song: next, position: 0 };
   }
   async start(message) {
     this.message = message;
