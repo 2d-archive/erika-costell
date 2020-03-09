@@ -1,4 +1,4 @@
-require("dotenv").config({ path: `${__dirname}\\.env` });
+require("dotenv");
 const { Manager } = require("discord.js-andesite");
 const { Client, Collection } = require("discord.js");
 
@@ -17,4 +17,4 @@ client.commands = new Collection();
 require("./utils/Handlers").loadCommands(client);
 require("./utils/Handlers").loadEvents(client);
 
-client.login(process.env.TOKEN);
+client.login("NjQ4MzI4ODM0NTMzMjk0MTEw.XfxHiw.el8SR-xwAtnan7vXNQ66fwnVJjk");

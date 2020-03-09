@@ -24,7 +24,7 @@ module.exports = class PlayCommand extends Command {
         .setColor("RED")
         .setDescription(`Use \`erika join\` to create a player.`));
 
-    if (!message.guild.channels.get(player.channelId).members.has(message.author.id))
+    if (!message.guild.channels.resolve(player.channelId).members.has(message.author.id))
       return message.channel.send(new MessageEmbed()
         .setColor("RED")
         .setDescription(`Please join the voice channel i'm in.`));

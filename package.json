@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "launchandesite": "java -Xmx2G -jar andesite.jar"
+    "launchandesite": "java -Xmx2G -jar node.jar"
   },
   "keywords": [],
   "dependencies": {
     "@ayana/logger": "^2.1.1",
     "discord.js": "github:discordjs/discord.js",
-    "discord.js-andesite": "^1.0.6",
+    "discord.js-andesite": "^1.0.17",
     "dotenv": "^8.2.0",
     "fs": "^0.0.1-security"
   },

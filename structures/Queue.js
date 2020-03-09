@@ -1,8 +1,12 @@
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
-  return (mod && mod.__esModule) ? mod : { "default": mod };
+  return (mod && mod.__esModule) ? mod : {
+    "default": mod
+  };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 const events_1 = require("events");
 class Queue extends events_1.EventEmitter {
   constructor(player) {
@@ -10,8 +14,13 @@ class Queue extends events_1.EventEmitter {
     this.player = player;
     this.next = [];
     this.previous = [];
-    this.repeat = { queue: false, song: false };
-    this.np = { position: 0 };
+    this.repeat = {
+      queue: false,
+      song: false
+    };
+    this.np = {
+      position: 0
+    };
     this.player.on("end", async (d) => {
       if (d.type !== 'TrackEndEvent' || !['REPLACED', 'STOPPED'].includes(d.reason)) {
         if (!this.repeat.song)
@@ -40,7 +49,10 @@ class Queue extends events_1.EventEmitter {
     const next = this.next.shift();
     if (this.np.song)
       this.previous.unshift(this.np.song);
-    return this.np = { song: next, position: 0 };
+    return this.np = {
+      song: next,
+      position: 0
+    };
   }
   async start(message) {
     this.message = message;
@@ -71,7 +83,9 @@ class Queue extends events_1.EventEmitter {
   clear() {
     this.next = [];
     this.previous = [];
-    this.np = { position: 0 };
+    this.np = {
+      position: 0
+    };
   }
   shuffle() {
     for (let i = this.next.length - 1; i > 0; i--) {

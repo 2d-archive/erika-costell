@@ -3,6 +3,6 @@
 /*.lock
 /.env
 /application.conf
-/andesite.jar
+/node.jar
 /logs
 /.idea

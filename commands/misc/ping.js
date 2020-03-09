@@ -23,9 +23,9 @@ module.exports = class BotInfoCommand extends Command {
       return res(message.channel.send(new MessageEmbed()
         .setColor("BLUE")
         .setDescription(new StringBuilder(BuilderOptions())
-          .append(`WebSocket Ping : ${Math.round(message.guild ? message.guild.shard.ping : client.ws.ping)}`)
-          .append(`API Ping : ${Math.round(Date.now() - start)}`)
-          .build())))
+          .append(`WebSocket Ping : ${Math.round(message.guild ? message.guild.shard.ping : client.ws.ping)}ms`)
+          .append(`API Ping : ${Math.round(Date.now() - start)}ms`)
+          .build(`prolog`))))
     });
   }
 }
