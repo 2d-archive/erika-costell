@@ -1,6 +1,6 @@
 # Erika Costell
 
-A full fledged music bot using my package [discord.js-andesite](https://npmjs.com/discrd.js-andesite).
+A full fledged music bot using my package [discord.js-andesite](https://npmjs.com/discord.js-andesite).
 
 ## Setup
 
